@@ -1,11 +1,13 @@
-package bg.musicapp.musicdb.repository;
+package bg.musicapp.musicdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import springfox.documentation.oas.annotations.EnableOpenApi;;
 
 @EnableScheduling
 @SpringBootApplication
+@EnableOpenApi
 public class MusicdbApplication {
 
 	public static void main(String[] args) {
