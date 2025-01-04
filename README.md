@@ -22,56 +22,6 @@ To run this application, ensure you have the following installed on your system:
 
 ---
 
-## Project Structure
-
-test {
-├───.idea
-├───docker
-├───gradle
-│   └───wrapper
-├───local
-└───src
-    ├───main
-    │   ├───java
-    │   │   └───bg
-    │   │       └───musicapp
-    │   │           └───musicdb
-    │   │               ├───aop
-    │   │               ├───config
-    │   │               ├───exceptions
-    │   │               ├───model
-    │   │               │   ├───binding
-    │   │               │   ├───entities
-    │   │               │   │   └───enums
-    │   │               │   ├───service
-    │   │               │   ├───validators
-    │   │               │   └───view
-    │   │               ├───repository
-    │   │               ├───service
-    │   │               │   └───impl
-    │   │               └───web
-    │   └───resources
-    │       ├───init
-    │       ├───static
-    │       │   ├───css
-    │       │   ├───images
-    │       │   └───js
-    │       └───templates
-    │           └───fragments
-    └───test
-        ├───java
-        │   └───bg
-        │       └───musicapp
-        │           └───musicdb
-        │               ├───musicdb
-        │               │   ├───service
-        │               │   │   └───impl
-        │               │   └───web
-        │               └───service
-        └───resources
-}
----
-
 ## Dependencies
 
 The project uses the following dependencies, configured in the `build.gradle` file:
