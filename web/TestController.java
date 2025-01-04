@@ -4,14 +4,12 @@ import bg.musicapp.musicdb.model.entities.UserEntity;
 import bg.musicapp.musicdb.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
-@Controller
+// these were all supposed to be just controller
+@RestController
 @RequestMapping("/test")
 public class TestController {
 

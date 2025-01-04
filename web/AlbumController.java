@@ -5,7 +5,6 @@ import bg.musicapp.musicdb.model.service.AlbumServiceModel;
 import bg.musicapp.musicdb.model.view.AlbumViewModel;
 import bg.musicapp.musicdb.service.AlbumService;
 import bg.musicapp.musicdb.service.ArtistService;
-import com.sun.xml.bind.v2.TODO;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,7 +17,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 import java.time.ZoneId;
 
-@Controller
+// these were all supposed to be just controllers
+@RestController
 @RequestMapping("/albums")
 public class AlbumController {
 
