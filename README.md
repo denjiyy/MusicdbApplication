@@ -17,7 +17,7 @@ To run this application, ensure you have the following installed on your system:
 
 ## Features
 
-- **API Documentation**: Easily access Swagger UI at `/swagger-ui.html` for interactive API documentation.
+- **API Documentation**: Easily access Swagger UI at `/swagger-ui.html` for interactive API documentation. You have to be logged in first though, so change the controllers from @RestController to @Controller in order to register an account. Then you can access the Swagger UI.
 - **Customizable Front-End**: Modify the annotations to switch between RESTful and front-end controller modes. (@RestController => @Controller)
 
 ---
