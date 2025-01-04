@@ -11,7 +11,7 @@ To run this application, ensure you have the following installed on your system:
 - **Java**: Version 11
 - **Gradle**: Version compatible with the project
 - **Spring Boot**: Version 2.4.3 (already configured in the project)
-- **Server Port**: 8080
+- **Server Port**: 8081
 
 ---
 
@@ -19,6 +19,94 @@ To run this application, ensure you have the following installed on your system:
 
 - **API Documentation**: Easily access Swagger UI at `/swagger-ui.html` for interactive API documentation.
 - **Customizable Front-End**: Modify the annotations to switch between RESTful and front-end controller modes. (@RestController => @Controller)
+
+---
+
+## API Documentation
+
+### Album Controller
+
+#### GET /albums/add
+- Description: Display the add album form
+- Response: Returns the "add-album" view
+
+#### POST /albums/add
+- Description: Add a new album
+- Request Body: AlbumAddBindingModel
+- Response: Redirects to "/home" on success, or back to "add" on validation errors
+
+#### GET /albums/details/{id}
+- Description: Display album details
+- Path Variable: id (Long)
+- Response: Returns the "details" view with album information
+
+### Album Rest Controller
+
+#### GET /albums/api
+- Description: Retrieve all albums
+- Response: List of AlbumViewModel objects
+
+### Article Controller
+
+#### GET /articles/all
+- Description: Display all articles
+- Response: Returns the "all-articles" view with the latest article
+
+#### GET /articles/add
+- Description: Display the add article form
+- Response: Returns the "add-article" view
+
+#### POST /articles/add
+- Description: Add a new article
+- Request Body: ArticleAddBindingModel
+- Response: Redirects to "/articles/all" on success, or back to "add" on validation errors
+
+### Home Controller
+
+#### GET /
+- Description: Display the index page
+- Response: Returns the "index" view
+
+#### GET /home
+- Description: Display the home page
+- Response: Returns the "home" view with carousel images
+
+### Stats Controller
+
+#### GET /statistics
+- Description: Display statistics
+- Response: Returns the "stats" view with log information
+
+### Test Controller
+
+#### GET /test/update
+- Description: Display the update form
+- Response: Returns the "test" view with user information
+
+#### PATCH /test/update/{id}
+- Description: Update user information
+- Path Variable: id (Long)
+- Response: Redirects to "/home"
+
+### User Controller
+
+#### GET /users/login
+- Description: Display the login form
+- Response: Returns the "login" view
+
+#### GET /users/register
+- Description: Display the registration form
+- Response: Returns the "register" view
+
+#### POST /users/register
+- Description: Register a new user
+- Request Body: UserRegistrationBindingModel
+- Response: Redirects to "/home" on success, or back to "register" on validation errors
+
+#### POST /users/login-error
+- Description: Handle failed login attempts
+- Request Parameter: username
+- Response: Redirects to "/users/login" with error information
 
 ---
 
