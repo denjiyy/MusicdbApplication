@@ -1,7 +1,7 @@
-package bg.musicapp.musicdb.repository;
+package bg.musicapp.musicdb;
 
-import bg.musicapp.musicdb.model.entities.artistService;
-import bg.musicapp.musicdb.model.entities.userService;
+import bg.musicapp.musicdb.service.ArtistService;
+import bg.musicapp.musicdb.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
