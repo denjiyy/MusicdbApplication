@@ -1,0 +1,58 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    main-class: bg.musicapp.musicdb.MusicdbApplication
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: "${MYSQLPASS:}"
+    url: "jdbc:mysql://${MYSQLHOST:localhost}:3306/musicapp_musicdb_w?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true"
+    username: root
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 5MB
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    pathmatch:
+      matching-strategy: ant_path_matcher  # Add this line here
+  jpa:
+    # For MySQL 5
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8081
+
+carousel:
+  images: aerosmith.jpeg, iron.jpeg, madonna.jpg, metallica.jpg, queen.jpg, rolling.jpeg
+  refresh-cron: "0 */10 * * * *"
+
+# Springdoc OpenAPI Configuration
+springdoc:
+  api-docs:
+    title: My Custom Music API
+    description: This is the API for my music application
+    version: 1.0
+    terms-of-service-url: http://your-app-terms-of-service-url.com
+    contact-name: Your Name
+    contact-url: http://your-contact-url.com
+    contact-email: your-email@example.com
+    license: Apache 2.0
+    license-url: http://www.apache.org/licenses/LICENSE-2.0
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    display-operation-id: true
+    display-request-duration: true
+    deep-linking: true
+    default-model-rendering: model
+    default-model-expand-depth: 2
+    enabled: true
