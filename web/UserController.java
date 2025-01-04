@@ -11,7 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-// these were all supposed to be just controllerc
+// these were all supposed to be just controllers
 @RestController
 @RequestMapping("/users")
 public class UserController {
