@@ -1,7 +1,7 @@
 package bg.musicapp.musicdb.service.impl;
 
 import bg.musicapp.musicdb.model.entities.UserEntity;
-import bg.softuni.musicdb.repository.UserRepository;
+import bg.musicapp.musicdb.repository.UserRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
