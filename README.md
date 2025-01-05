@@ -1,7 +1,7 @@
 # MusicDB Application
 
 MusicDB is a Spring Boot-based application that allows users to interact with a database of music records. This project uses Gradle as its build tool and provides both a Swagger interface for API documentation and a customizable front-end interface.
-
+(if you have problems running the app try the zip file)
 ---
 
 ## Prerequisites
