@@ -1,8 +1,8 @@
-package bg.softuni.musicdb.service;
+package bg.musicapp.musicdb.service;
 
-import bg.softuni.musicdb.model.entities.AlbumEntity;
-import bg.softuni.musicdb.model.service.AlbumServiceModel;
-import bg.softuni.musicdb.model.view.AlbumViewModel;
+import bg.musicapp.musicdb.model.entities.AlbumEntity;
+import bg.musicapp.musicdb.model.service.AlbumServiceModel;
+import bg.musicapp.musicdb.model.view.AlbumViewModel;
 
 public interface AlbumService {
   void createAlbum(AlbumServiceModel serviceModel);
